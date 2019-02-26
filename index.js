@@ -85,7 +85,7 @@ function collisionDetection() {
 		  ballColor=b.color;
           score++;
           if(score == brickRowCount*brickColumnCount) {
-            alert("YOU WIN, CONGRATS!\n Hit Refresh to play again...!");
+            alert("Woho!! You WoN, CONGRATS!\n Hit Refresh to play again...!");
 		isGameEnded=true;
 		 ctx.clearRect(0, 0, canvas.width, canvas.height);
 		return;
@@ -164,7 +164,7 @@ function draw() {
       lives--;
       if(!lives) {
         drawLives();
-        alert("GAME OVER.\nHit Refresh to play again...!");
+        alert("You are out of lives. GAME OVER.\nHit Refresh to play again...!");
 	isGameEnded=true;
 		return;
       }
@@ -195,6 +195,6 @@ function randomIntFromInterval(min,max) // min and max included
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-alert("Classic brick-breaker game.\nUse the paddle in order to keep the ball in the game & hit the bricks. \nYour mission is remove all the breakable bricks by hitting them with the ball.\n\n Let's get started...!!");
+alert("Classic block-breaker game.\nUse the paddle in order to keep the ball in the game & hit the bricks. \nYour mission is remove all the breakable bricks by hitting them with the ball.\n\n Let's get started...!!");
 
 draw();	
